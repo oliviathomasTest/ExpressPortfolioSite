@@ -184,6 +184,41 @@ ul.social li{
 }
 
 
+#title {
+  margin-left: 3%;
+}
+
+.photo{
+  height: 300px;
+  width: 300px;
+  border-radius: 50%;
+  margin-top: -1450px;
+  border: 5px solid #161614;
+  margin-left: 1000px;
+}
+
+.stuff {
+  display: inline-block;
+  margin-top: 6px;
+  margin-left: 55px;
+  width: 75%;
+  height: 1000px;
+}
+
+
+.head {
+  font-size: 20px;
+}
+
+#name {
+  font-family: Sacramento;
+  float: right;
+  margin-top: 10px;
+  margin-right: 4%;
+}
+
+
+
 
   
 
