@@ -2,7 +2,8 @@ var express = require("express");
 var router = express.Router();
 
 router.get("/", (req, res) => {
-  res.render("index");
+  res.render("index", {title : 'Home'});
+  
 });
 
 router.post("/", (req, res) => {
@@ -17,30 +18,34 @@ router.post("/", (req, res) => {
   res.redirect("/submit");
 });
 
-router.get("/submit", (req, res) => {
-  res.render("submit");
+router.get("/submit", (req, res,next) => {
+  res.render("submit",{title:'Submit'});
   console.log("reached submit");
 });
 
-router.post("/submit", (req, res) => {
+router.post("/submit", (req, res,next) => {
   console.log("back to home");
   res.redirect("/");
 });
 
-router.get("/projects", (req, res) => {
-  res.render("projects");
+router.get("/projects", (req, res,next) => {
+  res.render("projects",{title : 'Projects'});
 });
 
-router.get("/services", (req, res) => {
-  res.render("services");
+router.get("/services", (req, res,next) => {
+  res.render("services",{title : 'Services'});
 });
 
-router.get("/contact", (req, res) => {
-  res.render("contact");
+router.get("/contact", (req, res,next) => {
+  res.render("contact", {title : 'Contact'});
 });
 
-router.get("/about", (req, res) => {
-  res.render("about");
+router.get("/about", (req, res,next) => {
+  res.render("about",{title : 'About'});
+});
+
+router.get("/error", (req, res) => {
+  res.render("error",{title:'Error'});
 });
 
 module.exports = router;

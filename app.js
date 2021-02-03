@@ -36,6 +36,9 @@ app.use(
 app.set("view engine", "ejs");
 
 app.use(indexRoutes);
+app.use((req, res, next) => {
+  res.status(404).redirect('/error');
+ })
 
 app.listen(port, () =>
   console.log(`Express portfolio app listening on port ${port}!`)

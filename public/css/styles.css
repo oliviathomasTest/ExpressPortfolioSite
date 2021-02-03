@@ -166,22 +166,6 @@ ul.social li{
   position: relative;
 }
 
-@media (max-width: 900px) {
-  #container {
-    padding: 1.5rem;
-  }
-  .social {
-    margin-top: 2rem;
-    text-align: left;
-  }
-  .map {
-    display: none;
-  }
-  .credit {
-    position: relative;
-    text-align: center;
-  }
-}
 
 
 #title {
@@ -215,6 +199,14 @@ ul.social li{
   float: right;
   margin-top: 10px;
   margin-right: 4%;
+}
+
+.bottomnav{
+
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
 }
 
 
