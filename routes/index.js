@@ -1,3 +1,4 @@
+/* routes/index.js   Olivia Thomas  (301146636)  03-02-2021 */ 
 var express = require("express");
 var router = express.Router();
 
@@ -15,11 +16,11 @@ router.post("/", (req, res) => {
 
   console.log(firstname, lastname, email, message);
 
-  res.redirect("/submit");
+  res.render("submit",{title:'Submit',firstname, lastname,isDisplay : 'true'});
 });
 
 router.get("/submit", (req, res,next) => {
-  res.render("submit",{title:'Submit'});
+  res.render("submit",{title:'Submit',isDisplay : 'false'});
   console.log("reached submit");
 });
 

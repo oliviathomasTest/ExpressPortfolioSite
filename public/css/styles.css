@@ -1,3 +1,4 @@
+ /* styles.css   Olivia Thomas  (301146636)  03-02-2021 */ 
 body,
 html {
   margin: 0;
@@ -8,14 +9,6 @@ html {
 
 .navbar {
   font-weight: bold;
-}
-
-.arrow {
-  position: absolute;
-  top: 90%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  color: white;
 }
 
 .heading {
@@ -189,20 +182,23 @@ ul.social li{
   height: 1000px;
 }
 
+#about{
+  font-family: "Roboto Slab", serif;
+}
 
 .head {
   font-size: 20px;
+  
 }
 
 #name {
-  font-family: Sacramento;
+  
   float: right;
   margin-top: 10px;
   margin-right: 4%;
 }
 
 .bottomnav{
-
   left: 0;
   bottom: 0;
   width: 100%;

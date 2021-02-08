@@ -1,7 +1,11 @@
 <%- include("partials/header") -%>
 <%- include("partials/navbar") -%>
+<section>
 <div class="submitcard">
-  <h1 class="home-title">Thank you for connecting with me! 🙏</h1>
+  <% if(isDisplay == 'true'){ %>
+  <h2 class="home-title">Hello <%= firstname %> <%= lastname %> .. Nice to meet you 😇</h2>
+  <% } %>
+  <h6 class="home-title">Thank you for connecting with me! 🙏</h6>
   <p class="home-text">
     I have received your message and would like to thank you for writing to me.
     🎈
@@ -15,5 +19,6 @@
     </button>
   </form>
 </div>
+</section>
 <%- include("partials/bottom_nav") -%>
 <%- include("partials/footer") -%>
