@@ -1,9 +1,11 @@
 <%- include("partials/header") -%>
 <%- include("partials/navbar") -%>
+<!-- To display a welcome message to users who contact or connect -->
 <section>
 <div class="submitcard">
   <% if(isDisplay == 'true'){ %>
-  <h2 class="home-title">Hello <%= firstname %> <%= lastname %> .. Nice to meet you 😇</h2>
+    <!-- Extracts data from contact form -->
+  <h3 class="home-title">Hello <%= firstname %> <%= lastname %> .. Nice to meet you 😇</h3>
   <% } %>
   <h6 class="home-title">Thank you for connecting with me! 🙏</h6>
   <p class="home-text">

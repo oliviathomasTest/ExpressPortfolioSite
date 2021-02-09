@@ -18,6 +18,7 @@ html {
   text-align: center;
   margin: 2rem 0;
 }
+
 #homesec {
   width: auto;
   height: 100vh;
@@ -91,13 +92,7 @@ html {
   margin-top: 1rem;
   text-align: center;
 }
-.ppimg {
-  text-align: center;
-}
-.codeme {
-  font-weight: bold;
-  font-family: monospace;
-}
+
 .overlink:hover {
   background-color: yellow;
 }

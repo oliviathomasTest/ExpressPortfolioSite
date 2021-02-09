@@ -9,13 +9,14 @@
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarResponsive">
+        <!-- Nav item is set active or inactive based on title value  -->
         <ul class="navbar-nav ml-auto">
            <% if(title == 'Home'){ %>
           <li class="nav-item active">
          <% } else { %>
             <li class="nav-item "></li>
           <% } %>
-            <a class="nav-link" href="/">Home
+            <a class="nav-link" href="/"><i class="fas fa-home"></i> Home</i>
             </a>
           </li>
           <% if(title == 'Projects'){ %>
@@ -23,21 +24,21 @@
            <% } else { %>
               <li class="nav-item "></li>
             <% } %>
-            <a class="nav-link" href="/projects" data-target=".navbar-collapse.in">Projects</a>
+            <a class="nav-link" href="/projects" data-target=".navbar-collapse.in"><i class="fas fa-tasks"></i> Projects</a>
           </li>
           <% if(title == 'About'){ %>
             <li class="nav-item active">
            <% } else { %>
               <li class="nav-item "></li>
             <% } %>
-            <a class="nav-link" href="/about" data-target=".navbar-collapse.in">About</a>
+            <a class="nav-link" href="/about" data-target=".navbar-collapse.in"><i class="fas fa-portrait"></i> About</a>
           </li>
           <% if(title == 'Services'){ %>
             <li class="nav-item active">
            <% } else { %>
               <li class="nav-item "></li>
             <% } %>
-              <a class="nav-link" href="/services" data-target=".navbar-collapse.in">Services</a>
+              <a class="nav-link" href="/services" data-target=".navbar-collapse.in"><i class="fas fa-hand-holding-usd"></i> Services</a>
             </li>
             <% if(title == 'Contact'){ %>
                 <li class="nav-item active">
@@ -45,7 +46,7 @@
                   <li class="nav-item "></li>
                 <% } %>
             <a class="nav-link" style="font-weight:bold" data-target=".navbar-collapse.in"
-              href="/contact">Contact
+              href="/contact"><i class="fas fa-phone-square-alt"></i> Contact
             </a>
           </li>
         </ul>
