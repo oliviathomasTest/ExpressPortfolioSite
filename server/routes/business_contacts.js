@@ -6,7 +6,7 @@ let contacts = require('../models/contacts');
 
 
 
-router.get('/', isLoggedIn,(req, res,next) => {
+router.get('/', (req, res,next) => {
     
     contacts.find({}).sort({name : 1})
       .then(contactList => {
