@@ -21,7 +21,7 @@ const express = require("express"),
 
   const app = express();
    //point mongoose to the DB URI 
-   mongoose.connect(DB.URI || 'mongodb://localhost/data', 
+   mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost/data', 
    {useNewUrlParser: true,
     useUnifiedTopology: true
   }); 
