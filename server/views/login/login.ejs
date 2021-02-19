@@ -1,0 +1,45 @@
+<%- include("../partials/header") -%>
+<%- include("../partials/navbar") -%>
+<section class="login">
+<section class="col-md-4 " style="padding-top: 150px;padding-bottom: 150px;margin: 0 auto;" >
+    <div style="border-radius: 5px;
+    background-color: #080606;
+    padding: 20px;padding-bottom: 100px;">
+    <h1 style="margin-top: 40px;padding-bottom: 60px;color: white ;" class="text-center">Log In</h1>
+<form action="/login" method="POST">
+    
+    <div class="form-group">
+      <label for="InputEmail1" style="color: white ;">Username</label>
+      <input
+        name="username"
+        type="text"
+        class="form-control"
+        id="InputFirstName"
+        aria-describedby="nameHelp"
+        placeholder=""
+        required
+      />
+    </div>
+    <div class="form-group">
+      <label for="InputEmail1" style="color: white ;">Password</label>
+      <input
+        name="password"
+        type="password"
+        class="form-control"
+        id="InputLastName"
+        aria-describedby="nameHelp"
+        placeholder=""
+        required
+      />
+    
+
+    <button type="submit" class="submitbtn btn btn-primary btn-block">
+      Submit
+    </button>
+  </form>
+
+  </div>
+</section>
+</section>
+<%- include("../partials/bottom_nav") -%>
+<%- include("../partials/footer") -%>

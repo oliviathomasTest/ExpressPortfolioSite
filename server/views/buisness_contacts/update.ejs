@@ -1,0 +1,124 @@
+<%- include("../partials/header") -%>
+ <%- include("../partials/navbar") -%>
+ <style>
+  body {
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: top;
+    background-image: url("https://images.unsplash.com/photo-1543094585-3629d00f6f3a?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=1951&q=80");
+    width: 100%;
+    height: 100%;
+    font-family: Arial, Helvetica;
+    letter-spacing: 0.02em;
+    font-weight: 400;
+  }
+</style> 
+<section class="login">
+<h1 style="margin-top: 80px; padding-bottom: 50px;color: white;" class="text-center">
+  <b>Edit Contact : <%= contact.name %> </b>
+</h1>
+<div
+  style="
+    border-radius: 5px;
+    padding: 20px;
+    padding-bottom: 100px;
+    width: 100%;
+    margin: 0 auto;
+  "
+>
+  <!-- <form
+    action="/business-contacts/edit/<%= contact._id %>?_method=PUT"
+    method="POST"
+    style="margin-bottom: 100px"
+  > -->
+  <form
+    method="POST"
+    style="margin-bottom: 100px"
+  >
+    <div class="row">
+      <div style="width: 31%; margin: 0 auto">
+        <div class="form-group">
+          <div class="row">
+            <div class="col-md-4">
+              <label for="InputContactName" style="color: white"
+                ><b>Contact Name :</b>
+              </label>
+            </div>
+            <div class="col-md-8">
+              <input
+                id="InputContactName"
+                class="form-control"
+                type="text"
+                name="updated[name]"
+                value="<%= contact.name%>"
+              />
+            </div>
+          </div>
+        </div>
+        <div class="form-group">
+          <div class="row">
+            <div class="col-md-4">
+              <label for="InputContactNumber" style="color: white"
+                ><b>Contact Number:</b>
+              </label>
+            </div>
+            <div class="col-md-8">
+              <input
+                id="InputContactNumber"
+                class="form-control"
+                type="number"
+                name="updated[number]"
+                value="<%= contact.number%>"
+              />
+            </div>
+          </div>
+        </div>
+        <div class="form-group">
+            <div class="row">
+                <div class="col-md-4">
+          <label for="InputContactEmail" style="color: white;"><b>Contact Email : </b></label>
+        </div>
+        <div class="col-md-8">
+          <input
+            id="InputContactEmail"
+            class="form-control"
+            type="text"
+            name="updated[email]"
+            value="<%= contact.email%>"
+          />
+        </div>
+        </div>
+        </div>
+    
+        <div class="form-group" style="margin-top: 60px;">
+          <button class="btn btn-primary " style="margin-right: 90px;"><i class="fas fa-edit"></i> Update</button>
+          
+            <a class="btn btn-success " href="/business-contacts" style="color: white; float: right;"><i class="fas fa-undo-alt"></i> Cancel</a>
+          
+          
+            <a class="btn btn-danger  " href="/business-contacts/delete/<%= contact._id %>" style="color: white;"><i class="fas fa-trash-alt"></i> Delete</a>
+        
+        </div>
+
+        <!-- <button class="btn btn-success btn-block" style="float: right;">
+          <a href="/business-contacts" style="color: white;"> Cancel</a>
+        </button> -->
+      </div>
+    </div>
+  </form>
+ <!--  <form
+    action="/business-contacts/delete/<%= contact._id %>?_method=DELETE"
+    method="POST" style="margin-bottom: 30px;"
+  >
+    <button
+      class="btn btn-secondary btn-block"
+      style="width: 31%; margin: 0 auto"
+    >
+      Delete
+    </button>
+  </form> -->
+</div>
+</section>
+<%- include("../partials/bottom_nav") -%>
+ <%- include("../partials/footer") -%>

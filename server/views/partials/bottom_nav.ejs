@@ -1,10 +1,11 @@
 <!-- Footer Nav bar which changes based on title field passed to the respective routes -->
-<% if(title =='Home' || title == 'Contact'){ %>
-<div class="bottomnav" style="position: fixed">
+<% if(title =='Home' || title == 'Contact' || title == 'Login'){ %>
+<div class="bottomnav" style="position: fixed; ">
   <p style="color: white">Copyright &copy; 2021. All Rights Reserved</p>
   <% } else { %>
   <div class="bottomnav">
-    <p style="color: black">Copyright &copy; 2021. All Rights Reserved</p>
+    <p style="color: black; text-align: center;">Copyright &copy; 2021. All Rights Reserved</p>
     <% } %>
+
   </div>
 </div>
