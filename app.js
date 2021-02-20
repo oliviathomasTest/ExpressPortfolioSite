@@ -21,7 +21,7 @@ const express = require("express"),
 
   const app = express();
    //point mongoose to the DB URI 
-   mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost/data', 
+   mongoose.connect(process.env.MONGODB_URI || DB.URI, 
    {useNewUrlParser: true,
     useUnifiedTopology: true
   }); 
@@ -65,7 +65,8 @@ app.use(
  User.register({username:'jay', active: false}, 'jay');
  User.register({username:'roy', active: false}, 'roy'); */
 
-  /* User.register({username:'olivia',email: 'foo@bar.com', address: '123mainstreet',active:false},'ols');  */
+  /* User.register({username:'olivia',email: 'olivia@gmail.com', address: '123mainstreet',active:false},'olivia');  
+  User.register({username:'admin',email: 'admin@gmail.com', address: '4thAvenueRoad',active:false},'admin');  */
 
   
 app.use(passport.initialize());

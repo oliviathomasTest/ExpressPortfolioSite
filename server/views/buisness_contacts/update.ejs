@@ -27,11 +27,6 @@
     margin: 0 auto;
   "
 >
-  <!-- <form
-    action="/business-contacts/edit/<%= contact._id %>?_method=PUT"
-    method="POST"
-    style="margin-bottom: 100px"
-  > -->
   <form
     method="POST"
     style="margin-bottom: 100px"
@@ -100,24 +95,9 @@
             <a class="btn btn-danger  " href="/business-contacts/delete/<%= contact._id %>" style="color: white;"><i class="fas fa-trash-alt"></i> Delete</a>
         
         </div>
-
-        <!-- <button class="btn btn-success btn-block" style="float: right;">
-          <a href="/business-contacts" style="color: white;"> Cancel</a>
-        </button> -->
       </div>
     </div>
   </form>
- <!--  <form
-    action="/business-contacts/delete/<%= contact._id %>?_method=DELETE"
-    method="POST" style="margin-bottom: 30px;"
-  >
-    <button
-      class="btn btn-secondary btn-block"
-      style="width: 31%; margin: 0 auto"
-    >
-      Delete
-    </button>
-  </form> -->
 </div>
 </section>
 <%- include("../partials/bottom_nav") -%>
