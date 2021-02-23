@@ -13,13 +13,13 @@ const express = require("express"),
   methodOverride = require('method-override');
 
   
-
   let path = require('path');
   //database setup 
   let mongoose = require('mongoose');
   let DB = require("./server/config/db");
 
   const app = express();
+
    //point mongoose to the DB URI 
    mongoose.connect(process.env.MONGODB_URI || DB.URI, 
    {useNewUrlParser: true,
@@ -60,20 +60,14 @@ app.use(
     resave: false
   })
 );
-
- /* User.register({username:'paul', active: false}, 'paul');
- User.register({username:'jay', active: false}, 'jay');
- User.register({username:'roy', active: false}, 'roy'); */
-
-  /* User.register({username:'olivia',email: 'olivia@gmail.com', address: '123mainstreet',active:false},'olivia');  
-  User.register({username:'admin',email: 'admin@gmail.com', address: '4thAvenueRoad',active:false},'admin');  */
-
-  
+ 
+//initializes the authentication module
 app.use(passport.initialize());
 app.use(passport.session());
 
 passport.use(User.createStrategy());
 
+//serialize/deserialize the user data from the request.
 passport.serializeUser(User.serializeUser());
 passport.deserializeUser(User.deserializeUser());
 

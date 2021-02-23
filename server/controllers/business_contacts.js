@@ -1,7 +1,9 @@
+/* controllers/business_contacts.js   Olivia Thomas  (301146636)  23-02-2021 */
 let express = require("express");
 let router = express.Router();
 let contacts = require("../models/contacts");
 
+// Display Business Contacts page (Sorted list by names)
 module.exports.displayBusinessContacts = (req, res, next) => {
   contacts
     .find({})
@@ -14,6 +16,7 @@ module.exports.displayBusinessContacts = (req, res, next) => {
     });
 };
 
+//Display  Update view
 module.exports.displayEditPage = (req, res, next) => {
   contacts.findById(req.params.id, (err, foundContact) => {
     if (err) {
@@ -28,6 +31,7 @@ module.exports.displayEditPage = (req, res, next) => {
   });
 };
 
+// Update View Post route
 module.exports.updateContactPostRoute = (req, res, next) => {
   let id = req.params.id;
   contacts.updateOne({ _id: id }, req.body.updated, (err, updatedContact) => {
@@ -40,6 +44,7 @@ module.exports.updateContactPostRoute = (req, res, next) => {
   });
 };
 
+//Delete contact GET route
 module.exports.deleteContactRoute = (req, res, next) => {
   let id = req.params.id;
   contacts.remove({ _id: id }, (err, deletedContact) => {
