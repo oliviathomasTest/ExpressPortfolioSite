@@ -5,7 +5,7 @@ let contacts = require("../models/contacts");
 let contactsController = require("../controllers/business_contacts");
 
 //Business Contacts GET Route
-router.get("/", isLoggedIn, contactsController.displayBusinessContacts);
+router.get("/", contactsController.displayBusinessContacts);
 
 //Edit Contact GET route
 router.get("/edit/:id", contactsController.displayEditPage);
