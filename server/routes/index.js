@@ -8,21 +8,21 @@ router.get("/", indexController.displayHomePage);
 router.post("/", isLoggedIn, indexController.homePagePostRoute);
 
 /* Sumbit Route */
-router.get("/submit", isLoggedIn, indexController.displaySubmitPage);
+router.get("/submit",  indexController.displaySubmitPage);
 
 router.post("/submit", isLoggedIn, indexController.SubmitPagePostRoute);
 
 /* Projects Route */
-router.get("/projects", isLoggedIn, indexController.displayProjectsPage);
+router.get("/projects",  indexController.displayProjectsPage);
 
 /* Services Route */
-router.get("/services", isLoggedIn, indexController.displayServicesPage);
+router.get("/services",  indexController.displayServicesPage);
 
 /* Contact Route */
-router.get("/contact", isLoggedIn, indexController.displayContactsPage);
+router.get("/contact",  indexController.displayContactsPage);
 
 /* about Route */
-router.get("/about", isLoggedIn, indexController.displayAboutPage);
+router.get("/about",  indexController.displayAboutPage);
 
 /* Error Route */
 router.get("/error", indexController.displayErrorPage);
